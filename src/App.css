@@ -1,0 +1,12 @@
+*{
+  background-color: blanchedalmond;
+  font-family: monospace;
+  font-weight: lighter;
+}
+.center{
+  text-align: center;
+}
+
+.padding{
+  padding: 10px;
+}
