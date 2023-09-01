@@ -1,17 +1,10 @@
 import React,{ useState } from "react";
 import "./App.css";
+// import {logWorksheetNames} from "./functionalities.js";
 
 function DropdownList({ numDropdowns }) {
   const dropdowns = [...Array(numDropdowns)].map((_, i) => (
     <div key={i}>
-      <select className="center-dropdown" defaultValue="">
-        <option value="" disabled>
-          Select Subject
-        </option>
-        <option value="Math">Math</option>
-        <option value="Science">Science</option>
-        <option value="English">English</option>
-      </select>
       <select className="center-dropdown" defaultValue="">
         <option value="" disabled>
           Select Section
@@ -19,6 +12,14 @@ function DropdownList({ numDropdowns }) {
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
+      </select>
+      <select className="center-dropdown" defaultValue="">
+        <option value="" disabled>
+          Select Subject
+        </option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="English">English</option>
       </select>
     </div>
   ));
@@ -84,6 +85,7 @@ function App() {
           </button>
         </>
       )}
+      
     </div>
   );
 }

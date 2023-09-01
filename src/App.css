@@ -19,7 +19,7 @@ select {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid black;
-  width: 50%;
+  width: 25%;
   background-color: white;
 }
 
@@ -39,6 +39,9 @@ option {
 
 .center-dropdown {
   margin-top: 20px;
+}
+.center-dropdown select {
+  width: 50%;
 }
 
 button{
@@ -78,7 +81,7 @@ button{
   padding: 10px;
   border-radius: 5px;
   /* border: 1px solid black; */
-  width: 30%;
+  width: 50%;
   /* background-color: white; */
 }
 
