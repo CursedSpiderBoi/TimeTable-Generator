@@ -4,18 +4,18 @@ import "./App.css";
 
 function DropdownList({ numDropdowns }) {
   const dropdowns = [...Array(numDropdowns)].map((_, i) => (
-    <div key={i}>
-      <select className="center-dropdown" defaultValue="">
+    <div className="center" key={i}>
+      <select className="dropdown-inner padding" defaultValue="">
         <option value="" disabled>
-          Select Section
+          Select Subject
         </option>
         <option value="A">A</option>
         <option value="B">B</option>
         <option value="C">C</option>
       </select>
-      <select className="center-dropdown" defaultValue="">
+      <select className="dropdown-inner padding" defaultValue="">
         <option value="" disabled>
-          Select Subject
+          Select Section
         </option>
         <option value="Math">Math</option>
         <option value="Science">Science</option>
@@ -24,7 +24,7 @@ function DropdownList({ numDropdowns }) {
     </div>
   ));
 
-  return <div className="dropdown-list">{dropdowns}</div>;
+  return <div className="dropdown-subjects">{dropdowns}</div>;
 }
 
 function App() {

@@ -8,7 +8,7 @@
 }
 
 .padding{
-  padding: 10px;
+  padding: 1em;
 }
 
 select {
@@ -16,7 +16,7 @@ select {
   display: block;
   text-align: center;
   font-size: 1.2rem;
-  padding: 10px;
+  padding: 1em;
   border-radius: 5px;
   border: 1px solid black;
   width: 25%;
@@ -46,7 +46,7 @@ option {
 
 button{
   margin-top: 20px;
-  padding: 10px;
+  padding: 1em;
   border-radius: 5px;
   border: 1px solid black;
   background-color: white;
@@ -62,14 +62,14 @@ button{
 .next-button-right{
   position: absolute;
   bottom: 50%;
-  right:30%;
+  right:20%;
   background-color: rgb(92, 92, 197);
   color: white;
 }
 .back-button-left{
   position: absolute;
   bottom: 50%;
-  left:25%;
+  left:20%;
   background-color: rgb(197, 92, 92);
   color: white;
 }
@@ -78,10 +78,30 @@ button{
   display: block;
   text-align: center;
   font-size: 1.2rem;
-  padding: 10px;
+  padding: 1em;
   border-radius: 5px;
   /* border: 1px solid black; */
   width: 50%;
   /* background-color: white; */
 }
+.dropdown-subjects{
+  margin: 0 auto;
+  display: block;
+  
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1em;
+  border-radius: 5px;
+  /* border: 1px solid black; */
+  width: 50%;
+  /* background-color: white; */
+}
+.dropdown-inner{
+    display: inline-block;
+    margin: 1em;
+}
 
+.center{
+  display: flex;
+  justify-content: center;
+}
