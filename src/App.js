@@ -27,45 +27,6 @@ function DropdownList({ numDropdowns }) {
   return <div className="dropdown-subjects">{dropdowns}</div>;
 }
 
-function Timetable() {
-  return (
-    <div className="timetable">
-      <div className="time-column">
-        <div className="time">9:00</div>
-        <div className="time">10:00</div>
-        <div className="time">11:00</div>
-        <div className="time">12:00</div>
-        <div className="time">1:00</div>
-        <div className="time">2:00</div>
-        <div className="time">3:00</div>
-        <div className="time">4:00</div>
-      </div>
-      <div className="day-row">
-        <div className="day">Monday</div>
-        <div className="day">Tuesday</div>
-        <div className="day">Wednesday</div>
-        <div className="day">Thursday</div>
-        <div className="day">Friday</div>
-      </div>
-      <div className="class-grid">
-        <div className="class"></div>
-        <div className="class">Math</div>
-        <div className="class"></div>
-        <div className="class"></div>
-        <div className="class"></div>
-        <div className="class"></div>
-        <div className="class">Science</div>
-        <div className="class"></div>
-        <div className="class"></div>
-        <div className="class"></div>
-        <div className="class"></div>
-        <div className="class">English</div>
-      </div>
-    </div>
-  );
-}
-
-
 function App() {
   const [selectedValue, setSelectedValue] = useState("");
   const [nextClicked, setNextClicked] = useState(false);
@@ -140,29 +101,142 @@ function App() {
       )}
       {nextClicked1 && (
         <>
-          {/* <div>
-            <div className="time center">
-              <div className="icon">8:30 AM</div>
-              <div className="icon">10:00 AM</div>
-              <div className="icon">11:30 AM</div>
-              <div className="icon">1:00 PM</div>
-              <div className="icon">2:30 PM</div>
-              <div className="icon">4:00 PM</div>
-              <div className="icon">5:30 PM</div>
-            </div>
-            <div className="days center">
-              <div className="icon">Monday</div>
-              <div className="class center">
-                <div className="class-icon"></div>
-                <div className="class-icon"></div>
-                <div className="class-icon"></div>
-                <div className="class-icon"></div>
-                <div className="class-icon"></div>
-                <div className="class-icon"></div>
-                <div className="class-icon"></div>
+          <div className="center">
+            <div className="rectangle-parent">
+              <div className="group-child" />
+              <div className="time">
+                <div className="saturday-wrapper">
+                  <div className="am monospace">8:30 AM</div>
+                </div>
+                <div className="am-container">
+                  <div className="am monospace">10:00 AM</div>
+                </div>
+                <div className="am-frame">
+                  <div className="am monospace">11:30 AM</div>
+                </div>
+                <div className="pm-wrapper">
+                  <div className="am monospace">1:00 PM</div>
+                </div>
+                <div className="pm-container">
+                  <div className="am monospace">2:30 PM</div>
+                </div>
+                <div className="pm-frame">
+                  <div className="am monospace">4:00 PM</div>
+                </div>
+                <div className="frame-div">
+                  <div className="am monospace">5:30 PM</div>
+                </div>
+              </div>
+              <div className="monday-schedule">
+                <div className="monday">
+                  <div className="monday1 monospace">Monday</div>
+                </div>
+                <div className="div2">
+                  <div className="class-name-here-container">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+                <div className="div3">
+                  <div className="class-name-here-container">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+                <div className="div4">
+                  <div className="class-name-here-container">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+                <div className="div5">
+                  <div className="class-name-here-container">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+              </div>
+              <div className="tuesday-schedule">
+                <div className="monday">
+                  <div className="tuesday1 monospace">Tuesday</div>
+                </div>
+                <div className="lab-0830-1130">
+                  <div className="class-name-here-container6">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+
+                <div className="lab-0100-0400">
+                  <div className="class-name-here-container6">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+              </div>
+              <div className="wednesday-schedule">
+                <div className="saturday-wrapper">
+                  <div className="wednesday monospace">Wednesday</div>
+                </div>
+                <div className="div">
+                  <div className="class-name-here-container">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+              </div>
+              <div className="thursday-schedule">
+                <div className="saturday-wrapper">
+                  <div className="thursday monospace">Thursday</div>
+                </div>
+                <div className="div1">
+                  <div className="class-name-here-container">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+                <div className="lab-0230-0540">
+                  <div className="class-name-here-container6">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+              </div>
+              <div className="friday-schedule">
+                <div className="saturday-wrapper">
+                  <div className="friday monospace">Friday</div>
+                </div>
+                <div className="lab-1000-0100">
+                  <div className="class-name-here-container6">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
+              </div>
+              <div className="saturday-schedule">
+                <div className="saturday-wrapper">
+                  <div className="saturday monospace">Saturday</div>
+                </div>
+                <div className="lab-1130-0230">
+                  <div className="class-name-here-container6">
+                    <p className="class-name monospace">class name</p>
+                  </div>
+                  <div className="child" />
+                  <div className="room monospace">room</div>
+                </div>
               </div>
             </div>
-          </div> */}
+          </div>
           <button className="back-button-left" onClick={handleBack1}>
             Back
           </button>
