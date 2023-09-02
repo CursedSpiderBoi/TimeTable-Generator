@@ -14,9 +14,12 @@ function readSheetData(sheetIndex) {
 
 function writeDataToFile(data) {
     const content = `module.exports = ${JSON.stringify(data)};`;
-    fs.writeFile('./data.js', content, (err) => {
+    fs.truncate('./data.js', 0, (err) => {
         if (err) throw err;
-        console.log('Data written to file');
+        fs.writeFile('./data.js', content, (err) => {
+            if (err) throw err;
+            console.log('Data written to file');
+        });
     });
 }
 
