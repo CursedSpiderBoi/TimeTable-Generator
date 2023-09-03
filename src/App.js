@@ -9,17 +9,17 @@ function DropdownList({ numDropdowns }) {
         <option value="" disabled>
           Select Subject
         </option>
-        <option value="A">A</option>
-        <option value="B">B</option>
-        <option value="C">C</option>
+        <option value="Math">Math</option>
+        <option value="Science">Science</option>
+        <option value="English">English</option>
       </select>
       <select className="dropdown-inner padding" defaultValue="">
         <option value="" disabled>
           Select Section
         </option>
-        <option value="Math">Math</option>
-        <option value="Science">Science</option>
-        <option value="English">English</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
       </select>
     </div>
   ));

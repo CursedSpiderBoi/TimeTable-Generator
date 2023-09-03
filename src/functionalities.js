@@ -24,18 +24,32 @@ function replaceTextInFile(filePath, oldText, newText) {
     fs.writeFileSync(filePath, newData);
 }
 
-function addClassNameToTimings(data) {
+function convertData() {
+  const data = JSON.parse(fs.readFileSync("./data.js", "utf8"));
   const newData = data.map((row) => {
-    const className = row["Class"];
-    const timings = Object.keys(row).filter((key) => key !== "Class");
-    const newTimings = timings.map((timing) => {
-      return {
-        timings: `${className} ${timing}`,
-        class: row[timing],
-      };
-    });
-    return newTimings;
-  }).flat();
+    const day = row["Day"];
+    const timings = Object.keys(row).filter((key) => key !== "Day" && row[key] !== "");
+    const newTimings = timings.reduce((acc, timing) => {
+      const timingValue = row[timing];
+      const classValue = row["Class"];
+      const existingPair = acc.find(pair => pair[1] === timingValue && pair[2] === classValue);
+      if (!existingPair) {
+        acc.push([timing, timingValue, classValue]);
+      }
+      return acc;
+    }, []);
+    return { Day: day, Timings: newTimings };
+  });
+  fs.writeFileSync("./data.js", JSON.stringify(newData, null, 2));
+}
+function addDayToData() {
+  const data = JSON.parse(fs.readFileSync("./data.js", "utf8"));
+  const newData = data.map((row) => {
+    if (!row.Day) {
+      row.Day = data[0].Day;
+    }
+    return row;
+  });
   fs.writeFileSync("./data.js", JSON.stringify(newData, null, 2));
 }
 
@@ -64,7 +78,11 @@ replaceTextInFile("./data.js", "Thursday          Thursday                      
 replaceTextInFile("./data.js", "Friday          Friday                    ", "Friday");
 replaceTextInFile("./data.js", "Saturday      Saturday", "Saturday");
 
-// addClassNameToTimings(data);
+
+convertData();
+
+
+
 
 
   
